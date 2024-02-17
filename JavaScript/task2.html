@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0402 Словесна оценка</title>
+</head>
+<body>
+    <script>
+        let score = 77.2;
+        let res = score + ' точки са ';
+
+        if(score < 40) {
+            res += 'Слаб(2)';
+        } else if (score < 60){
+            res += 'Среден(3)';
+        } else if (score < 75){
+            res += 'Добър(4)';
+        } else if (score < 90) {
+            res += 'Мн. добър(5)';
+        } else {
+            res += 'Отличен(6)';
+        }
+
+        console.log(res);
+    </script>
+</body>
+</html>
