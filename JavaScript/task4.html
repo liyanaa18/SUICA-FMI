@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0404 Страница на Трибоначи</title>
+</head>
+<body>
+    <div></div>
+
+    <script>
+
+        let temp = '<span>0</span>, <span>0</span>, 1';
+
+        let a = 0;
+        let b = 0;
+        let c = 1;
+
+        while(a + b + c < 1000000000) {
+            let d = a + b + c;
+
+            if( d % 2 == 0 )
+				temp += ', <span>' + d + '</span>';
+			else
+				temp += ', ' + d;
+
+            a = b;
+            b = c;
+            c = d;
+        }
+
+        let page = document.getElementsByTagName('div') [0];
+        page.innerHTML = temp;
+
+        let spans = document.getElementsByTagName('span');
+        for(let i = 0; i < spans.length; i++) {
+            spans[i].style.color = 'crimson';
+        }
+    </script>
+</body>
+</html>
